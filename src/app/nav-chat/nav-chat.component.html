@@ -1,0 +1,36 @@
+<div class="container" style="padding:0">
+    <div class="row">
+        <div class="col-12 border" style="cursor: pointer;border-color: #292B2F !important;height: 6vh;font-size: 24px;">
+            <header>
+                <span class="text-light">
+              #General
+            </span>
+            </header>
+            <div class="col-12" style="height: 83vh;padding-top: 15px;">
+                <div>
+
+
+                    <ul>
+                        <p class="col-12" style="color:#D2D3D4" *ngFor="let hero of heroes">
+                            {{hero}}
+                        </p>
+                    </ul>
+                </div>
+                <hr>
+            </div>
+            <div>
+                <div class="input-group col-12">
+                    <!-- <div class="input-group-prepend">
+                        <span style="background:#484C52" class="input-group-text text-light"></span>
+                    </div>
+                    <textarea style="background:#484C52; color: white;" class="form-control" aria-label="With textarea"></textarea> -->
+                    <input class="col5" style="background:#484C52; color: white;height: 66px;" class="form-control" aria-label="With textarea" #newHero>
+
+                    <button class="col5" (click)="addHero(newHero.value)">Enviar</button>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
