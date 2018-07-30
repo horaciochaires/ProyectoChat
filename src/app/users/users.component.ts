@@ -21,6 +21,9 @@ export class UsersComponent implements OnInit {
   guardarLocal(users){
     localStorage.setItem("item",users.nombre)
   }
+
+ 
+
   ngOnInit() {
   }
 
