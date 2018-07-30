@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px;
+    padding: 20px;
     flex-basis: 100%;
     font-size: 13px;
     font-weight: 500;
@@ -27,7 +27,7 @@
 }
 .fa-circle{
     color: #1CFE0D;
-    margin-left: 10px;
+    margin-left: 0px;
    
 }
 .fa-edit{
@@ -35,5 +35,12 @@
     margin-left: 100px;
 }
 ._2v6o{
-    padding: 12px;
+    padding-top: 6px;
+}
+.fas{
+    background: white;
+    padding: 10px;
+   }
+.iconCall{
+   margin-top: 15px;
 }
