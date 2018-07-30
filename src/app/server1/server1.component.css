@@ -1,0 +1,36 @@
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    flex-basis: 100%;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 7px 0 0;
+    overflow: hidden;
+    text-align: center;
+}
+.iconLeft{
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    padding: 15px;
+    flex-basis: 100%;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 7px 0 0;
+    overflow: hidden;
+    text-align: left; 
+}
+.fa-circle{
+    color: #1CFE0D;
+    margin-left: 10px;
+   
+}
+.fa-edit{
+    padding: 10px;
+    margin-left: 100px;
+}
+._2v6o{
+    padding: 12px;
+}

@@ -18,5 +18,12 @@ export class NavChatComponent implements OnInit {
 
   ngOnInit() {
   }
+  keyDownFunction(event) {debugger;
+    if(event.keyCode == 13) {
+      this.heroes.push(localStorage.getItem("item") + ": " + event.currentTarget.value);
+      
+    }
+  }
+ 
 
 }
