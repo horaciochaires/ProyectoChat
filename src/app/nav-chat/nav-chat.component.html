@@ -20,15 +20,16 @@
             </div>
             <div>
                 <div class="input-group col-12">
-                    <!-- <div class="input-group-prepend">
-                        <span style="background:#484C52" class="input-group-text text-light"></span>
-                    </div>
-                    <textarea style="background:#484C52; color: white;" class="form-control" aria-label="With textarea"></textarea> -->
-                    <input class="col5" style="background:#484C52; color: white;height: 66px;" class="form-control" aria-label="With textarea" #newHero>
-
-                    <button class="col5" (click)="addHero(newHero.value)">Enviar</button>
-
-
+                    <input  placeholder="Escribe un mensaje ..." (keydown)="keyDownFunction($event)" class="col5" style="background:rgb(255, 255, 255); color: rgb(0, 0, 0);height: 45px;" class="form-control" aria-label="With textarea" #newHero>
+                    <i class="fas fa-images"></i>
+                    <i class="fas fa-gift"></i>
+                    <i class="fas fa-grin-alt"></i>
+                    <i class="fas fa-microphone"></i>
+                    <i class="fas fa-gamepad"></i>
+                    <i class="fas fa-camera"></i>
+                    <i class="fas fa-thumbs-up"></i>
+                     <!-- <button class="fas" (click)="addHero(newHero.value)">Enviar</button> -->
+                    
                 </div>
             </div>
         </div>
