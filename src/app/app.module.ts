@@ -14,7 +14,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { Server1Component } from './server1/server1.component';
 import { Server2Component } from './server2/server2.component';
 import { SearchComponent } from './search/search.component';
-import { ChanelText2Component } from './chanel-text2/chanel-text2.component';
 import { ChanelVoice2Component } from './chanel-voice2/chanel-voice2.component';
 import { NavTools2Component } from './nav-tools2/nav-tools2.component';
 import { Users2Component } from './users2/users2.component';
@@ -34,7 +33,6 @@ import { NavUsers2Component } from './nav-users2/nav-users2.component';
     Server1Component,
     Server2Component,
     SearchComponent,
-    ChanelText2Component,
     ChanelVoice2Component,
     NavTools2Component,
     Users2Component,
