@@ -52,3 +52,25 @@
     height: 30px;
     width: 30px;
 }
+
+.padding12 {
+    padding-left: 12px;
+}
+
+.mrg0 {
+    margin: 0px
+}
+
+.deletepadding {
+    padding: 0px
+}
+
+.estiloNombre {
+    padding-left: 10px;
+    color: black!important;
+}
+
+.estiloMensaje {
+    padding-left: 10px;
+    color: #999999!important;
+}
