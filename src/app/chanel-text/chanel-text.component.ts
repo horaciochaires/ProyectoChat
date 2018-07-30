@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
 
 @Component({
   selector: 'app-chanel-text',
@@ -6,9 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./chanel-text.component.css']
 })
 export class ChanelTextComponent implements OnInit {
-
+  
+  @Input() nombre:string;
   constructor() { }
-
+  
+ 
   ngOnInit() {
   }
 
