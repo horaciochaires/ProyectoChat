@@ -1,0 +1,21 @@
+.contentSearch {
+    cursor: pointer;
+    border-color: #FFFFFF !important;
+    height: 9vh;
+    font-size: 24px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+
+.deletePadding {
+    padding: 0px;
+}
+
+.bgSearch {
+    background: #F5F6F7
+}
+
+.styleSearch {
+    background: #F5F6F7;
+    border-color: #F5F6F7;
+}
