@@ -1,33 +1,3 @@
-<div class="container col-12">
-    <div class="row">
-        <div class="col-1" style="background:#202225;height:100vh">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div>
-                            <div class="">
-                                <img style="width: 50px;
-                              height: 50px;" src="https://i.imgur.com/J1fs1zC.jpg" class="rounded-circle" alt="Cinque Terre">
-                            </div>
-                            <a [routerLink]="['server1']" class="text-center text-light col-12" style="padding:0px">&nbsp;&nbsp; DC</a>
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div>
-                            <div class="">
-                                <img style="width: 50px;
-                                      height: 50px;" src="https://i.imgur.com/J1fs1zC.jpg" class="rounded-circle" alt="Cinque Terre">
-                            </div>
-
-                            <a [routerLink]="['server2']" class="text-center text-light col-12" style="padding:0px">Marvel</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-11" style="padding:0">
-            <router-outlet></router-outlet>
-        </div>
-    </div>
-
-</div>
+<app-server1></app-server1>
+<router-outlet>
+</router-outlet>
