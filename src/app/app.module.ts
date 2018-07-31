@@ -19,6 +19,7 @@ import { NavTools2Component } from './nav-tools2/nav-tools2.component';
 import { Users2Component } from './users2/users2.component';
 import { NavChat2Component } from './nav-chat2/nav-chat2.component';
 import { NavUsers2Component } from './nav-users2/nav-users2.component';
+import { StatusChatDirective } from './status-chat.directive';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { NavUsers2Component } from './nav-users2/nav-users2.component';
     NavTools2Component,
     Users2Component,
     NavChat2Component,
-    NavUsers2Component
+    NavUsers2Component,
+    StatusChatDirective
   ],
   imports: [
     BrowserModule,
