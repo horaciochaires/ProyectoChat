@@ -12,4 +12,8 @@ export class NavToolsComponent implements OnInit {
   ngOnInit() {
   }
 
+  devolverName(){
+     return localStorage.getItem("image")
+  }
+
 }

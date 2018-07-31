@@ -20,6 +20,9 @@ export class UsersComponent implements OnInit {
   constructor() { }  
   guardarLocal(users){
     localStorage.setItem("item",users.nombre)
+    localStorage.setItem("image",users.img)
+  
+    
   }
 
  
