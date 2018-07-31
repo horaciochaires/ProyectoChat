@@ -4,7 +4,7 @@ import { Directive,HostListener,HostBinding  } from '@angular/core';
   selector: '[appStatusChat]'
 })
 export class StatusChatDirective {
-  @HostBinding('class.item-status') private show : boolean=false;
+  @HostBinding('class.fa-circle2') private show : boolean=false;
   @HostListener('click')
   onmouseover(){
     console.log("entro");
