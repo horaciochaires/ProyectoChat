@@ -8,9 +8,12 @@ import { Component, OnInit,Input } from '@angular/core';
 export class ChanelTextComponent implements OnInit {
   
   @Input() nombre:string;
+  @Input() item:string;
   constructor() { }
   
- 
+ agregarnombre(){
+  this.item =  localStorage.getItem("item");
+ }
   ngOnInit() {
   }
 

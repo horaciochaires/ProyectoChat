@@ -15,5 +15,8 @@ export class NavToolsComponent implements OnInit {
   devolverName(){
      return localStorage.getItem("image")
   }
+  agregarnombre(){
+    return localStorage.getItem("item")
+ }
 
 }
