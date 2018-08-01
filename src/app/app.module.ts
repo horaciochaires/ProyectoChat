@@ -7,6 +7,7 @@ import { ChanelTextComponent } from './chanel-text/chanel-text.component';
 import { ChanelVoiceComponent } from './chanel-voice/chanel-voice.component';
 import { NavChatComponent } from './nav-chat/nav-chat.component';
 import { NavServersComponent } from './nav-servers/nav-servers.component';
+import { FormsModule } from '@angular/forms';
 import { NavToolsComponent } from './nav-tools/nav-tools.component';
 import { NavUsersComponent } from './nav-users/nav-users.component';
 import { UsersComponent } from './users/users.component';
@@ -20,6 +21,8 @@ import { Users2Component } from './users2/users2.component';
 import { NavChat2Component } from './nav-chat2/nav-chat2.component';
 import { NavUsers2Component } from './nav-users2/nav-users2.component';
 import { StatusChatDirective } from './status-chat.directive';
+import { FilterPipeModule } from 'ngx-filter-pipe';
+import { FilterdataPipe } from './filterdata.pipe';
 
 @NgModule({
   declarations: [
@@ -39,12 +42,14 @@ import { StatusChatDirective } from './status-chat.directive';
     Users2Component,
     NavChat2Component,
     NavUsers2Component,
-    StatusChatDirective
+    StatusChatDirective,
+    FilterdataPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule.forRoot()
+    NgbModule.forRoot(),
+    FilterPipeModule, FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

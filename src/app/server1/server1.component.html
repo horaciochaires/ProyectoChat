@@ -2,18 +2,18 @@
     <div class="row">
         <div class="col-1">
             <div class="iconLeft">
-               <!--  <i appStatusChat class="fas fa-cog"></i>
+                <!--  <i appStatusChat class="fas fa-cog"></i>
                  -->
-                
+
                 <div class="dropdown">
-                    <i appStatusChat class="fas fa-cog"></i>
+                    <i class="fas fa-cog"></i>
                     <div class="dropdown-content">
-                      <a href="#">Conectado</a>
-                      <a href="#">Desconectado</a>
-                      <a href="#">Ausente</a>
+                        <a href="#">Conectado</a>
+                        <a href="#">Desconectado</a>
+                        <a href="#">Ausente</a>
                     </div>
-                  </div>
-                  <i class="fas fa-circle"></i>
+                </div>
+                <i class="fas fa-circle"></i>
             </div>
         </div>
         <div class="col-2" style="background: #ffffff ;">
@@ -31,7 +31,7 @@
                 <h4 class="_17w2" id="js_8">
                     <span class="box2Name">Messenger</span>
                 </h4>
-                
+
             </div>
 
         </div>
@@ -52,7 +52,41 @@
 <div class="container col-12">
     <div class="row">
         <div class="col-3" style="background:#FFFFFF;height:90vh">
-            <app-nav-users></app-nav-users>
+                
+                        
+                    
+                    
+                <div class="input-group col-12 deletePadding">
+                        <div class="input-group-prepend bgSearch ">
+                            <span class="input-group-text styleSearch " id="basic-addon1"><i style="color:#00d32a" class="fas fa-search"></i></span>
+                        </div>
+                        <input type="text" [(ngModel)]="queryString"class="form-control styleSearch text-center" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                    </div> 
+          
+            <div *ngFor="let user of users | filterdata: queryString : 'name' ; let i = index " class="memberOffline-2lN7gt member-3W1lQa"
+                (click)="guardarLocal(user)" style="height: 64px;
+margin-left: 0px;
+">
+
+                <div class="content-OzHfo4 col-12 padding12">
+                    <div class="row mrg0">
+                        <div class="col-2 text-left deletepadding">
+                            <img class="" style="border-radius:88%;width: 88%;" src="{{user.img}}">
+                        </div>
+                        <div class="memberInner-2CPc3V col-8 text-left deletepadding">
+                            <div class="nameTag-3p0yK- nameTag-m8r81H deletepadding estiloNombre">
+                                <span class="usernameOffline-3VSVLk username-1cB_5E ">{{user.name}}</span>
+                            </div>
+                            <div class="nameTag-3p0yK- nameTag-m8r81H deletepadding estiloMensaje">
+                                <span class="usernameOffline-3VSVLk username-1cB_5E ">Este es un mensaje</span>
+                            </div>
+                        </div>
+                        <div class="col-2" style="padding:0px">
+                            <p style="color:#919191">1 hora</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
         </div>
         <div class="col-6" style="background:#FFFFFF;height:89vh">
