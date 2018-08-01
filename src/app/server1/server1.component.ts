@@ -13,11 +13,24 @@ users = [{name:"Batman",img:"https://cdn0.iconfinder.com/data/icons/geek-zone-ic
   {name:"Flash",img:"https://cdn4.iconfinder.com/data/icons/superheroes/512/theflash-512.png"}
 
 ];
+  estado: boolean;
   constructor() { }
 
   ngOnInit() {
   }
   agregarnombre(){
     return localStorage.getItem("item")
- }
+  }
+
+ setConectado(){
+
+  return this.estado=true;
+  
+  }
+
+  setDesconectado(){
+    
+    return this.estado=false;
+    
+  }
 }

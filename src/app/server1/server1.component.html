@@ -8,12 +8,12 @@
                 <div class="dropdown">
                     <i class="fas fa-cog"></i>
                     <div class="dropdown-content">
-                        <a href="#">Conectado</a>
-                        <a href="#">Desconectado</a>
-                        <a href="#">Ausente</a>
+                      <a href="#" (click)="setConectado()">Conectado</a>
+                      <a href="#" (click)="setDesconectado()">Desconectado</a>
+                      
                     </div>
-                </div>
-                <i class="fas fa-circle"></i>
+                  </div>
+                  <i class="fas fa-circle" [ngClass]="{online: estado ==true, offline: estado==false}"></i>
             </div>
         </div>
         <div class="col-2" style="background: #ffffff ;">
