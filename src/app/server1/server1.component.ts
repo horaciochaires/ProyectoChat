@@ -7,11 +7,24 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class Server1Component implements OnInit {
 @Input() item:string;
+  estado: boolean;
   constructor() { }
 
   ngOnInit() {
   }
   agregarnombre(){
     return localStorage.getItem("item")
- }
+  }
+
+ setConectado(){
+
+  return this.estado=true;
+  
+  }
+
+  setDesconectado(){
+    
+    return this.estado=false;
+    
+  }
 }
