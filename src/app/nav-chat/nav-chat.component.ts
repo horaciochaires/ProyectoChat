@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-nav-chat',
@@ -13,7 +13,7 @@ export class NavChatComponent implements OnInit {
       this.heroes.push(localStorage.getItem("item") + ": " + newHero);
     }
   }
-  
+  @Input() user:string;
   constructor() { }
 
   ngOnInit() {

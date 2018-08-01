@@ -59,7 +59,7 @@
                 <input type="text" [(ngModel)]="queryString" class="form-control styleSearch text-center" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
             </div>
 
-            <div *ngFor="let user of users | filterdata: queryString : 'name' ; let i = index " class="memberOffline-2lN7gt member-3W1lQa" (click)="guardarLocal(user)" style="height: 64px;
+            <div *ngFor="let user of users | filterdata: queryString : 'name' ; let i = index "  class="memberOffline-2lN7gt member-3W1lQa" (click)="guardarLocal(user)" routerLink="mensajes/{{user.name}}" style="height: 64px;
 margin-left: 0px;
 padding-top: 12px;
 ">
@@ -86,7 +86,7 @@ padding-top: 12px;
 
         </div>
         <div class="col-6" style="background:#FFFFFF;height:89vh">
-            <app-nav-chat></app-nav-chat>
+            <app-nav-chat [user]="agregarnombre()"></app-nav-chat>
         </div>
         <div class="col-3" style="background:#FFFFFF;height:90vh">
             <app-nav-tools></app-nav-tools>
