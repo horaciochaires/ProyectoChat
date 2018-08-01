@@ -33,4 +33,11 @@ users = [{name:"Batman",img:"https://cdn0.iconfinder.com/data/icons/geek-zone-ic
     return this.estado=false;
     
   }
+  guardarLocal(users){
+    localStorage.setItem("item",users.name)
+    localStorage.setItem("image",users.img)
+  
+    
+  }
+
 }
