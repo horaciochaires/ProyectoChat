@@ -23,6 +23,7 @@ import { NavUsers2Component } from './nav-users2/nav-users2.component';
 import { StatusChatDirective } from './status-chat.directive';
 import { FilterPipeModule } from 'ngx-filter-pipe';
 import { FilterdataPipe } from './filterdata.pipe';
+import {MesagesDataService} from './services/mesages-data.service'
 
 @NgModule({
   declarations: [
@@ -51,7 +52,7 @@ import { FilterdataPipe } from './filterdata.pipe';
     NgbModule.forRoot(),
     FilterPipeModule, FormsModule
   ],
-  providers: [],
+  providers: [MesagesDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
