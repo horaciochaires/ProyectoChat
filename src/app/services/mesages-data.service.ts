@@ -5,8 +5,9 @@ import { Injectable } from '@angular/core';
 })
 export class MesagesDataService {
   private usuarios:any[]=[
-    {id:'1', mensaje:'Hola'},
-    {id:'2', mensaje:'Pasame el codigo porque el isntructor solo ayuda a jesus :('}
+    {id:'1', mensaje:'Hola',idUserReceptor:1},
+    {id:'2', mensaje:'Pasame el codigo porque el isntructor solo ayuda a jesus :(',idUserReceptor:1},
+    {id:'2', mensaje:'Hola',idUserReceptor:2}
   ]
   
 private friends:any[]=[
@@ -21,10 +22,11 @@ private friends:any[]=[
   public getmensajes():any[]{
     return this.usuarios;
   }
-  public postMensajes(mensaje:any){
+  public postMensajes(mensaje:any,userReceptor:any){
     const mensajeobj={
       id:new Date().getTime().toString(),
-      mensaje:mensaje
+      mensaje:mensaje,
+      idUserReceptor:userReceptor
     };
     this.usuarios.push(mensajeobj)
     console.log(mensajeobj);

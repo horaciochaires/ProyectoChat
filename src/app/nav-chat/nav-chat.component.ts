@@ -10,6 +10,7 @@ export class NavChatComponent implements OnInit {
   heroes = [];
   mensaje:string;
   usuarioSeleccionado = "Default";
+  usuarioReceptor: any;
   addHero(newHero: string) {
     if (newHero) {
       this.heroes.push(localStorage.getItem("item") + ": " + newHero);
@@ -28,7 +29,8 @@ export class NavChatComponent implements OnInit {
   }
     }
     public  postMensaje(){
-      this.MesagesDatasService.postMensajes(this.mensaje);
+      this.usuarioReceptor= localStorage.getItem("IdReceptor");
+      this.MesagesDatasService.postMensajes(this.mensaje,this.usuarioReceptor);
       this.mensaje='';
      
     }
