@@ -10,6 +10,7 @@ export class NavChatComponent implements OnInit {
   heroes = [];
   mensaje:string;
   usuarioSeleccionado = "Default";
+  usuarioReceptor: any;
   addHero(newHero: string) {
     if (newHero) {
       this.heroes.push(localStorage.getItem("item") + ": " + newHero);
@@ -28,18 +29,20 @@ export class NavChatComponent implements OnInit {
      return false;
   }
     }
-    public  postMensaje(){debugger;
-      this.MesagesDatasService.postMensajes(this.mensaje);debugger;
-      this.mensaje='';
-     
-    }
+  
     public  postMensajeLike(){
-      this.MesagesDatasService.postMensajes("👍");
+      this.usuarioReceptor= localStorage.getItem("IdReceptor");
+      this.MesagesDatasService.postMensajes("👍",this.usuarioReceptor);
       this.mensaje='';
+    }
+    public  postMensaje(){
+      this.usuarioReceptor= localStorage.getItem("IdReceptor");
+      this.MesagesDatasService.postMensajes(this.mensaje,this.usuarioReceptor);
+     
      
     }
   }
-  
+}
   
  
 
