@@ -22,13 +22,19 @@ export class NavChatComponent implements OnInit {
     this.heroes= this.MesagesDatasService.getmensajes();
   }
   keyDownFunction(event) {
+    console.log("Entro");
     if(event.keyCode == 13) {
       this.heroes.push(localStorage.getItem("item") + ": " + event.currentTarget.value);
      return false;
   }
     }
-    public  postMensaje(){
-      this.MesagesDatasService.postMensajes(this.mensaje);
+    public  postMensaje(){debugger;
+      this.MesagesDatasService.postMensajes(this.mensaje);debugger;
+      this.mensaje='';
+     
+    }
+    public  postMensajeLike(){
+      this.MesagesDatasService.postMensajes("👍");
       this.mensaje='';
      
     }
