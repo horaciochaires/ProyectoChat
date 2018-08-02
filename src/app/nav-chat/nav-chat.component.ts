@@ -29,21 +29,15 @@ export class NavChatComponent implements OnInit {
      return false;
   }
     }
-  
-    public  postMensajeLike(){
+    public postMensajeLike(){
       this.usuarioReceptor= localStorage.getItem("IdReceptor");
       this.MesagesDatasService.postMensajes("👍",this.usuarioReceptor);
       this.mensaje='';
     }
-    public  postMensaje(){
+    public postMensaje(){
       this.usuarioReceptor= localStorage.getItem("IdReceptor");
       this.MesagesDatasService.postMensajes(this.mensaje,this.usuarioReceptor);
       this.mensaje='';
-     
     }
   }
 }
-  
- 
-
-

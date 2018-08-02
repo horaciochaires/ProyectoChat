@@ -23,7 +23,10 @@ import { NavUsers2Component } from './nav-users2/nav-users2.component';
 import { StatusChatDirective } from './status-chat.directive';
 import { FilterPipeModule } from 'ngx-filter-pipe';
 import { FilterdataPipe } from './filterdata.pipe';
-import {MesagesDataService} from './services/mesages-data.service'
+import {MesagesDataService} from './services/mesages-data.service';
+import { MessengerComponent } from './pages/messenger/messenger.component';
+import { LoginComponent } from './pages/login/login.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component'
 
 @NgModule({
   declarations: [
@@ -44,7 +47,10 @@ import {MesagesDataService} from './services/mesages-data.service'
     NavChat2Component,
     NavUsers2Component,
     StatusChatDirective,
-    FilterdataPipe
+    FilterdataPipe,
+    MessengerComponent,
+    LoginComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
