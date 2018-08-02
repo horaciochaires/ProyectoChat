@@ -59,7 +59,7 @@
                 <input type="text" [(ngModel)]="queryString" class="form-control styleSearch text-center" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
             </div>
 
-            <div *ngFor="let user of users | filterdata: queryString : 'name' ; let i = index "  class="memberOffline-2lN7gt member-3W1lQa" (click)="guardarLocal(user)" routerLink="mensajes/{{user.name}}" style="height: 64px;
+            <div *ngFor="let user of Friends | filterdata: queryString : 'name' ; let i = index "  class="memberOffline-2lN7gt member-3W1lQa" (click)="guardarLocal(user)" routerLink="mensajes/{{user.nombre}}" style="height: 64px;
 margin-left: 0px;
 padding-top: 12px;
 ">
@@ -71,7 +71,7 @@ padding-top: 12px;
                         </div>
                         <div class="memberInner-2CPc3V col-8 text-left deletepadding">
                             <div class="nameTag-3p0yK- nameTag-m8r81H deletepadding estiloNombre">
-                                <span class="usernameOffline-3VSVLk username-1cB_5E ">{{user.name}}</span>
+                                <span class="usernameOffline-3VSVLk username-1cB_5E ">{{user.nombre}}</span>
                             </div>
                             <div class="nameTag-3p0yK- nameTag-m8r81H deletepadding estiloMensaje">
                                 <span class="usernameOffline-3VSVLk username-1cB_5E ">Este es un mensaje</span>

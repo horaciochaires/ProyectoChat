@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import {MesagesDataService} from '../services/mesages-data.service'
 
 @Component({
   selector: 'app-server1',
@@ -14,9 +15,11 @@ users = [{name:"Batman",img:"https://cdn0.iconfinder.com/data/icons/geek-zone-ic
 
 ];
   estado: boolean;
-  constructor() { }
+  Friends=[];
+  constructor(private FriendsServices: MesagesDataService) { }
 
   ngOnInit() {
+    this.Friends=this.FriendsServices.getFriends();
   }
   agregarnombre(){
     return localStorage.getItem("item")
@@ -34,7 +37,7 @@ users = [{name:"Batman",img:"https://cdn0.iconfinder.com/data/icons/geek-zone-ic
     
   }
   guardarLocal(users){
-    localStorage.setItem("item",users.name)
+    localStorage.setItem("item",users.nombre)
     localStorage.setItem("image",users.img)
   
     
