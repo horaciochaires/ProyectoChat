@@ -15,7 +15,7 @@ const routes: Routes = [
       
   },
   {
-    path: 'mensajes/:user',component:NavChatComponent,
+    path: 'mensajes/:user',component:Server1Component,
   }
 ];
 

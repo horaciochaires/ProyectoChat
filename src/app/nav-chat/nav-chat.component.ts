@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import {MesagesDataService} from '../services/mesages-data.service'
 
 @Component({
   selector: 'app-nav-chat',
@@ -7,6 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class NavChatComponent implements OnInit {
   heroes = [];
+  mensaje:string;
   usuarioSeleccionado = "Default";
   addHero(newHero: string) {
     if (newHero) {
@@ -14,9 +16,10 @@ export class NavChatComponent implements OnInit {
     }
   }
   @Input() user:string;
-  constructor() { }
+  constructor(private MesagesDatasService: MesagesDataService) { }
 
   ngOnInit() {
+    this.heroes= this.MesagesDatasService.getmensajes();
   }
   keyDownFunction(event) {
     if(event.keyCode == 13) {
@@ -24,7 +27,13 @@ export class NavChatComponent implements OnInit {
      return false;
   }
     }
+    public  postMensaje(){
+      this.MesagesDatasService.postMensajes(this.mensaje);
+      this.mensaje='';
+     
+    }
   }
+  
   
  
 
