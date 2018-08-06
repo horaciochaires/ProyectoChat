@@ -6,10 +6,27 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nav-users.component.css']
 })
 export class NavUsersComponent implements OnInit {
-
+  estado: boolean;
+  item: string;
   constructor() { }
 
   ngOnInit() {
   }
+
+  agregarnombres(){
+    this.item= localStorage.getItem("item")
+ }
+
+  setConectado(){
+
+    return this.estado=true;
+    
+    }
+  
+    setDesconectado(){
+      
+      return this.estado=false;
+      
+    }
 
 }

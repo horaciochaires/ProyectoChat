@@ -16,12 +16,21 @@ private friends:any[]=[
   {id:3,nombre:"Mujer Maravilla",img:"https://cdn2.iconfinder.com/data/icons/many-people-flat-icons/128/wonder-women-512.png"},
   {id:4,nombre:"Flash",img:"https://cdn4.iconfinder.com/data/icons/superheroes/512/theflash-512.png"}
 ]
+public id:any;
+
 
 
   constructor() { }
   public getmensajes():any[]{
     return this.usuarios;
   }
+
+public getMensajesPorUsuario(id:Number){
+  
+  console.log(this.usuarios.filter(x=> x.idUserReceptor==localStorage.getItem("id")));
+ return this.usuarios.filter(x=> x.idUserReceptor==id);
+}
+
   public postMensajes(mensaje:any,userReceptor:any){
     const mensajeobj={
       id:new Date().getTime().toString(),
@@ -36,6 +45,10 @@ private friends:any[]=[
  public getFriends():any[]{
 
    return this.friends;
+  }
+
+  public getIdChat(){
+    return this.id=localStorage.getItem("id");
   }
   
 }

@@ -8,17 +8,24 @@ import {MesagesDataService} from '../services/mesages-data.service'
 })
 export class UsersComponent implements OnInit {
   
-  Friend=[];
+  Chats=[];
+  idUser: Number;
   constructor(private Friends: MesagesDataService) { }  
   guardarLocal(users){
     localStorage.setItem("item",users.nombre)
+    localStorage.setItem("id",users.id)
     localStorage.setItem("image",users.img)
+    
+     this.idUser=users.id
+    // alert(this.idUser);
+    
   }
-
- 
 
   ngOnInit() {
-    this.Friend=this.Friends.getFriends();
+    
+    this.Chats=this.Friends.getFriends();
   }
+
+
 
 }

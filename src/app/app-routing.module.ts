@@ -7,15 +7,11 @@ import { NavChatComponent } from './nav-chat/nav-chat.component';
 
 const routes: Routes = [
   {
-    path: 'server1', component:Server1Component,
+    path: '', component:Server1Component,
       
   },
   {
-    path: 'server2', component:Server2Component,
-      
-  },
-  {
-    path: 'mensajes/:user',component:Server1Component,
+    path: 'mensajes/:user',component:NavChatComponent,
   }
 ];
 

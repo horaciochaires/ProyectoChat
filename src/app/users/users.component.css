@@ -1,76 +1,163 @@
-.content-OzHfo4 {
-    -ms-flex-align: center;
-    -ms-flex-positive: 1;
-    -webkit-box-align: center;
-    -webkit-box-flex: 1;
-    -webkit-box-sizing: border-box;
-    align-items: center;
-    box-sizing: border-box;
-    display: -webkit-box;
-    display: -ms-flexbox;
+.box {
     display: flex;
-    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    flex-basis: 100%;
+    font-size: 13px;
+    font-weight: 500;
+    margin: 7px 0 0;
+    overflow: hidden;
+    text-align: center;
+}
+
+.box2Name {
+    font-size: 13px;
+}
+
+.iconLeft {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    padding: 15px;
+    flex-basis: 100%;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 7px 0 0;
+    overflow: hidden;
+    text-align: left;
+}
+
+.fa-circle {
+    color: #1CFE0D;
+    margin-left: 0px;
+}
+
+.online {
+    color: #1CFE0D;
+    margin-left: 0px;
+}
+
+.offline {
+    color: red;
+    margin-left: 0px;
+}
+
+.fa-edit {
+    padding: 10px;
+    margin-left: 100px;
+}
+
+._2v6o {
+    padding-top: 3px;
+}
+
+.fas {
+    background: transparent;
+    padding: 10px;
+}
+
+.iconCall {
+    margin-top: 15px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #0000;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropbtn {
+    background-color: #4CAF50;
+    color: rgb(236, 8, 8);
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* The container <div> - needed to position the dropdown content */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+
+/* Dropdown Content (Hidden by Default) */
+
+.dropdown-content {
+    display: none;
+    position: fixed;
+    background-color: #ffffff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(245, 202, 202, 0.2);
+    z-index: 1;
+}
+
+
+/* Links inside the dropdown */
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+
+/* Change color of dropdown links on hover */
+
+.dropdown-content a:hover {
+    background-color: #5109d6
+}
+
+
+/* Show the dropdown menu on hover */
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+
+.dropdown:hover .dropbtn {
+    background-color: #031303;
+}
+
+.contentSearch {
+    cursor: pointer;
+    border-color: #FFFFFF !important;
+    height: 9vh;
+    font-size: 24px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+
+.deletePadding {
     padding: 0px;
 }
 
-.member-3W1lQa {
-    -ms-flex-align: center;
-    -webkit-box-align: center;
-    -webkit-box-sizing: border-box;
-    align-items: center;
-    border-radius: 3px;
-    box-sizing: border-box;
-    cursor: pointer;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    height: 40px;
-    margin: 1px 0 1px 8px;
-    overflow: hidden;
+.bgSearch {
+    background: #F5F6F7
 }
 
-.avatarWrapper-3B0ndJ {
-    margin-right: 10px;
-}
-
-.wrapper-2F3Zv8 {
-    -ms-flex-negative: 0;
-    flex-shrink: 0;
-    position: relative;
-}
-
-.image-33JSyf {
-    background-clip: padding-box;
-    background-color: none;
-    background-position: 50%;
-    background-size: 100%;
-    height: 100%;
-    width: 100%;
-}
-
-.small-5Os1Bb {
-    height: 30px;
-    width: 30px;
-}
-
-.padding12 {
-    padding-left: 12px;
-}
-
-.mrg0 {
-    margin: 0px
-}
-
-.deletepadding {
-    padding: 0px
-}
-
-.estiloNombre {
-    padding-left: 10px;
-    color: black!important;
-}
-
-.estiloMensaje {
-    padding-left: 10px;
-    color: #999999!important;
+.styleSearch {
+    background: #F5F6F7;
+    border-color: #F5F6F7;
 }

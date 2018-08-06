@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import {MesagesDataService} from '../services/mesages-data.service'
+import { AngularWaitBarrier } from '../../../node_modules/blocking-proxy/built/lib/angular_wait_barrier';
 
 @Component({
   selector: 'app-nav-chat',
@@ -11,16 +12,18 @@ export class NavChatComponent implements OnInit {
   mensaje:string;
   usuarioSeleccionado = "Default";
   usuarioReceptor: any;
+  id:any;
   addHero(newHero: string) {
     if (newHero) {
       this.heroes.push(localStorage.getItem("item") + ": " + newHero);
     }
   }
-  @Input() user:string;
-  constructor(private MesagesDatasService: MesagesDataService) { }
+  @Input() user:Number;
+  constructor(private MesagesDatasService: MesagesDataService) {}
 
   ngOnInit() {
-    this.heroes= this.MesagesDatasService.getmensajes();
+    this.heroes= this.MesagesDatasService.getMensajesPorUsuario(this.user);
+   
   }
   keyDownFunction(event) {
     console.log("Entro");
@@ -41,8 +44,15 @@ export class NavChatComponent implements OnInit {
       this.mensaje='';
      
     }
+
+      
+    public mensajesPorUsuario(){
+     this.heroes= this.MesagesDatasService.getMensajesPorUsuario(this.id);
+    }
+
+
   }
-}
+
   
  
 

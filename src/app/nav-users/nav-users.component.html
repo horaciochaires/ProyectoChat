@@ -1,13 +1,51 @@
-<div class="container" style="padding:0">
+<div class="container col-12" style="height:10vh">
     <div class="row">
-        <div class="col-12" style="padding:0">
-            <div class="col-12" style="padding:0">
-                <div style="height:63px">
-                    <app-search></app-search>
-                </div>
+        <div class="col-1">
+            <div class="iconLeft">
+                <!--  <i appStatusChat class="fas fa-cog"></i>
+                 -->
 
-                <app-users></app-users>
+                <div class="dropdown">
+                    <i class="fas fa-cog"></i>
+                    <div class="dropdown-content">
+                        <a href="#" (click)="setConectado()">Conectado</a>
+                        <a href="#" (click)="setDesconectado()">Desconectado</a>
+
+                    </div>
+                </div>
+                <i class="fas fa-circle" [ngClass]="{online: estado ==true, offline: estado==false}"></i>
             </div>
         </div>
+        <div class="col-2" style="background: #ffffff ;">
+            <div class="box">
+                <p>Messenger</p>
+                <i class="fas fa-edit"></i>
+            </div>
+        </div>
+        <div class="col-7" style="background: #ffffff;;height:6vh">
+            <div class="_2v6o" style="text-align: center;">
+                <h4 class="_17w2" id="js_8">
+                    <span class="box2Name">{{agregarnombres()}}</span>
+
+                </h4>
+                <h4 class="_17w2" id="js_8">
+                    <span class="box2Name">Messenger</span>
+                </h4>
+
+            </div>
+
+        </div>
+        <div class="col-2 iconCall" style="height: 10vh;
+        margin-top: 0px;
+        padding-top: 15px;
+        font-size: 23px;
+        text-align: right;">
+            <i class="fas fa-phone text-right"></i>
+            <i class="fas fa-video text-right"></i>
+            <i class="fas fa-info-circle text-right"></i>
+        </div>
+
+
+
     </div>
 </div>
